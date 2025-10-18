@@ -1,0 +1,119 @@
+/* Base page styles and font */
+html, body {
+	/* ...existing code... */
+	font-family: "Inter", system-ui, -apple-system, "Segoe UI", Georgia, 'Times New Roman', Times, serif, "Helvetica Neue", proxima-nova;
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+	background-color: #e7b719; /* subtle page background for contrast outside the banner */
+}
+
+/* CTA banner: tall, full-width, nature-inspired blue -> teal gradient */
+.cta-banner {
+	/* Make the banner tall and visually striking */
+	min-height: 70vh;
+	padding: 5rem 1rem;
+	/* Layered background: a semi-opaque teal gradient OVER the photo to keep the image subtle
+	   and ensure sufficient contrast for text. The gradient is listed first so it sits on top
+	   of the image. Fallback colors retain the original gradient if the image cannot load. */
+	background:
+		linear-gradient(135deg, rgba(3,105,161,0.75) 0%, rgba(14,165,164,0.6) 60%, rgba(29,210,195,0.45) 100%),
+		url("img/woman.png") center/cover no-repeat,
+		linear-gradient(135deg, #0369a1 0%, #0ea5a4 60%, #1dd2c3 100%);
+	color: #ffffff;
+	/* center text without advanced layout systems */
+	text-align: center;
+	/* ensure content sits centered and constrained */
+	box-sizing: border-box;
+}
+
+/* Content wrapper: constrain width for better readability */
+.cta-content {
+	/* keep content readable on large screens */
+	max-width: 900px;
+	margin: 0 auto;
+	/* slight translucent backdrop to gently separate content from background */
+	background: rgba(255,255,255,0.03);
+	padding: 1.5rem;
+	border-radius: 10px;
+}
+
+/* Main heading: large, easy-to-read type */
+.cta-banner h1 {
+	font-size: 2.4rem; /* large headline for emphasis */
+	line-height: 1.05;
+	margin: 0 0 1rem 0;
+	font-weight: 700;
+	/* subtle text shadow to lift text off the gradient background */
+	text-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* Short descriptive text under the heading */
+.cta-desc {
+	font-size: 1.05rem;
+	margin: 0 0 1.5rem 0;
+	opacity: 0.95;
+	max-width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* CTA button: bright teal that stands out, large click area */
+.btn-primary {
+	display: inline-block;
+	background-color: #f78e2b; /* bright teal accent */
+	color: #00313a; /* dark text for contrast against bright button */
+	text-decoration: none;
+	padding: 0.9rem 1.6rem;
+	border-radius: 8px;
+	font-weight: 700;
+	font-size: 1rem;
+	border: none;
+	/* soft shadow to make the button pop */
+	box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+	/* make link look like a button for beginners */
+	cursor: pointer;
+}
+
+/* Hover and focus states to improve affordance and accessibility */
+.btn-primary:hover,
+.btn-primary:focus {
+	background-color: #f3d80b; /* slightly darker teal on hover */
+	color: #ffffff;
+	outline: none;
+	text-decoration: none;
+	box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+/* Simple site header: short bar above the banner */
+.site-header {
+	/* keep header compact and aligned with the color palette */
+	background: rgba(3,105,161,0.12); /* subtle blue tint from the banner */
+	color: #ffffff;
+	text-align: center;
+	padding: 0.6rem 1rem;
+	/* slight separation from the banner */
+	border-bottom: 1px solid rgba(255,255,255,0.06);
+	box-sizing: border-box;
+}
+
+/* Site title styling: clear, readable, and simple */
+.site-title {
+	/* make the site name prominent but small enough to let CTA be the main focus */
+	font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	font-weight: 600;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 1.05rem;
+	letter-spacing: 0.3px;
+}
+
+/* Ensure header remains readable on small screens */
+@media (min-width: 600px) {
+	.site-title {
+		font-size: 1.15rem;
+	}
+	.cta-banner h1 {
+		font-size: 3.2rem;
+	}
+}

@@ -2,10 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pet Fostering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charity Water — Take Action</title>
+  <!-- Simple modern font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Content goes here -->
+  <!-- Add a simple site header above the CTA banner -->
+  <header class="site-header" role="banner">
+    <a class="site-title" href="/">Charity Water</a>
+  </header>
+
+  <section class="cta-banner" aria-labelledby="cta-heading">
+    <div class="cta-content">
+      <h1 id="cta-heading">World leaders, creators, and everyday heroes are already in. Are you?</h1>
+      <p class="cta-desc">
+        From global voices to local communities, the fight for clean water is uniting us all- and it starts with your support.
+      </p>
+      <a class="btn-primary" href="/foster">Become a Hero</a>
+    </div>
+  </section>
+
+  <!-- New: info section with two evenly sized columns (image + info) -->
+  <section class="info-section" aria-labelledby="info-heading">
+    <div class="two-col">
+      <figure class="col">
+        <img src="img/water kids.jpg" alt="Happy foster pet" />
+      </figure>
+      <article class="col" aria-labelledby="info-heading">
+        <h2 id="info-heading">What makes a hero?</h2>
+        <p>
+          Making small impacts in our communities can create a ripple effect of change.
+        </p>
+        <ul>
+          <li>Visible Impact on Health & Hydration</li>
+          <li>Strength & Teamwork on Display</li>
+          <li>Recognition as a Reliable Backbone</li>
+        </ul>
+        <p>
+          <a class="btn-primary" href="/learn-more">Learn About the Squad</a>
+        </p>
+      </article>
+    </div>
+  </section>
+  
+  <!-- ...existing code... -->
 </body>
 </html>
